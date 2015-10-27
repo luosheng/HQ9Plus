@@ -56,7 +56,7 @@ struct HQ9Plus {
     }
     
     func interprete() throws {
-        try HQ9Plus.source.characters.forEach { c in
+        try HQ9Plus.source.uppercaseString.characters.forEach { c in
             guard let operation = Operation(rawValue: c) else {
                 throw Error.InvalidOperation
             }
